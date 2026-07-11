@@ -1,0 +1,55 @@
+name: Link Check
+
+on:
+  schedule:
+    # Mondays 06:00 UTC. Note: GitHub disables scheduled workflows in repos
+    # with no activity for 60 days; a push re-enables them.
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - README.md
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Check links
+        id: check
+        run: |
+          set +e
+          broken=$(bash scripts/check-links.sh)
+          status=$?
+          {
+            echo "broken<<EOF"
+            echo "$broken"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+          if [ -n "$broken" ]; then
+            echo "Broken links found:"
+            echo "$broken"
+          fi
+          exit $status
+
+      # Scheduled/manual runs report rot as an issue (one open issue,
+      # appended to on repeat failures). PR runs just fail the check.
+      - name: File or update issue
+        if: failure() && github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BROKEN: ${{ steps.check.outputs.broken }}
+        run: |
+          title="Broken links detected in README"
+          body=$(printf 'The link check found unreachable URLs (non-200, redirects not followed):\n\n```\n%s\n```\n\n_Automated report from the link-check workflow._' "$BROKEN")
+          existing=$(gh issue list --state open --search "\"$title\" in:title" --json number --jq '.[0].number')
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --body "$body"
+          else
+            gh issue create --title "$title" --body "$body"
+          fi

@@ -8,19 +8,15 @@ PRs welcome — if you find a broken link or want to add a source, open an issue
 
 ## MP4 (Progressive Download)
 
+> The classic Google/GTV bucket (`commondatastorage.googleapis.com/gtv-videos-bucket`)
+> now returns 403 for all sample files and has been removed from this list.
+
 | URL | Codec | Resolution | Source | Notes |
 |-----|-------|------------|--------|-------|
-| [BigBuckBunny.mp4](http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4) | H.264 | 1280x720 | Google/GTV | ~10 min, reliable uptime |
-| [ElephantsDream.mp4](http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4) | H.264 | 1280x720 | Google/GTV | |
-| [Sintel.mp4](http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4) | H.264 | 1280x720 | Google/GTV | |
-| [ForBiggerBlazes.mp4](http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4) | H.264 | 1280x720 | Google/GTV | Short clip (~15s) |
-| [ForBiggerEscapes.mp4](http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4) | H.264 | 1280x720 | Google/GTV | Short clip |
-| [ForBiggerFun.mp4](http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4) | H.264 | 1280x720 | Google/GTV | Short clip |
-| [ForBiggerJoyrides.mp4](http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4) | H.264 | 1280x720 | Google/GTV | Short clip |
-| [ForBiggerMeltdowns.mp4](http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4) | H.264 | 1280x720 | Google/GTV | Short clip |
-| [SubaruOutbackOnStreetAndDirt.mp4](http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4) | H.264 | 1280x720 | Google/GTV | |
+| [BigBuckBunny.mp4](https://uploads.video-commander.com/sample/BigBuckBunny.mp4) | H.264 | 1280x720 | Video Commander | ~10 min; HTTPS mirror of the retired GTV sample |
 | [Big_Buck_Bunny_360_10s_1MB.mp4 (H.264)](https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4) | H.264 | 640x360 | test-videos.co.uk | 10s clip, ~1MB |
 | [Big_Buck_Bunny_360_10s_1MB.mp4 (AV1)](https://test-videos.co.uk/vids/bigbuckbunny/mp4/av1/360/Big_Buck_Bunny_360_10s_1MB.mp4) | AV1 | 640x360 | test-videos.co.uk | 10s clip, ~1MB |
+| [flower.mp4](https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4) | H.264 | — | MDN/CC0 | Short, public domain |
 
 ---
 
@@ -43,9 +39,9 @@ PRs welcome — if you find a broken link or want to add a source, open an issue
 | [tears-of-steel mp4/.m3u8](https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.mp4/.m3u8) | VOD | Unified Streaming | MP4-backed HLS |
 | [test/master.m3u8](https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8) | Live | Akamai | Public live test stream |
 | [eight/playlist.m3u8](https://moctobpltc-i.akamaihd.net/hls/live/571329/eight/playlist.m3u8) | Live | Akamai | Public live test stream |
-| [skip_armstrong_stereo_subs.m3u8](http://d3rlna7iyyu8wu.cloudfront.net/skip_armstrong/skip_armstrong_stereo_subs.m3u8) | VOD | Dolby | Stereo + subs; HTTP only |
-| [skip_armstrong_multichannel_subs.m3u8](http://d3rlna7iyyu8wu.cloudfront.net/skip_armstrong/skip_armstrong_multichannel_subs.m3u8) | VOD | Dolby | Multichannel + subs; HTTP only |
-| [skip_armstrong_multi_language_subs.m3u8](http://d3rlna7iyyu8wu.cloudfront.net/skip_armstrong/skip_armstrong_multi_language_subs.m3u8) | VOD | Dolby | Multi-language subs; HTTP only |
+| [x36xhzz.m3u8](https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8) | VOD | Mux | Big Buck Bunny, multi-bitrate; hls.js demo default |
+| [angel-one-hls/hls.m3u8](https://storage.googleapis.com/shaka-demo-assets/angel-one-hls/hls.m3u8) | VOD | Shaka demo assets | Angel One, multi-audio |
+| [channel1.isml/.m3u8](https://demo.unified-streaming.com/k8s/low-latency/stable/channel1/channel1.isml/.m3u8) | Live | Unified Streaming | Low-latency live origin |
 
 ---
 
@@ -59,6 +55,27 @@ PRs welcome — if you find a broken link or want to add a source, open an issue
 | [BBB_OnDemand_HEVC_MultiRate.mpd](http://dash.akamaized.net/dash264/TestCasesHEVC/1a/2/BBB_OnDemand_HEVC_MultiRate.mpd) | HEVC | Akamai | Big Buck Bunny, multi-rate |
 | [elephants_dream_480p_aaclc_stereo_sidx.mpd](http://dash.akamaized.net/dash264/TestCases/3b/fraunhofer/aac-lc_stereo_with_video/ElephantsDream/elephants_dream_480p_aaclc_stereo_sidx.mpd) | H.264 + AAC-LC | Akamai/Fraunhofer | Elephants Dream, 480p |
 | [sintel_audio_video_mpegh_5_1_brs_sidx.mpd](http://dash.akamaized.net/dash264/TestCasesMCA/fraunhofer/MPEGH_51/1/sintel_audio_video_mpegh_5_1_brs_sidx.mpd) | MPEG-H 5.1 | Akamai/Fraunhofer | Sintel, spatial audio |
+| [sintel/dash.mpd](https://storage.googleapis.com/shaka-demo-assets/sintel/dash.mpd) | H.264 | Shaka demo assets | Multi-audio + subtitles |
+| [angel-one/dash.mpd](https://storage.googleapis.com/shaka-demo-assets/angel-one/dash.mpd) | H.264 | Shaka demo assets | Clear (unencrypted) counterpart to the Widevine version below |
+| [tears-of-steel.ism/tears-of-steel.mpd](https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/tears-of-steel.mpd) | H.264 | Unified Streaming | Tears of Steel |
+| [channel1.isml/.mpd](https://demo.unified-streaming.com/k8s/low-latency/stable/channel1/channel1.isml/.mpd) | H.264 | Unified Streaming | Low-latency live origin |
+
+---
+
+## DRM-Protected (DASH)
+
+Useful for testing DRM signaling: `ContentProtection` descriptors, `cenc:pssh`
+decoding, and key-ID handling. Playback requires a license server; manifest and
+init-segment inspection does not.
+
+| URL | DRM | Source | Notes |
+|-----|-----|--------|-------|
+| [angel-one-widevine/dash.mpd](https://storage.googleapis.com/shaka-demo-assets/angel-one-widevine/dash.mpd) | Widevine | Shaka demo assets | cenc scheme; Widevine pssh in manifest (content-ID based, no payload KIDs) |
+| [v7-MultiDRM-SingleKey/Manifest_1080p.mpd](https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest_1080p.mpd) | Widevine + PlayReady | Axinom test vectors | Single key; PlayReady pssh carries a WRMHEADER 4.0.0.0 with base64 KID |
+| [v7-MultiDRM-MultiKey/Manifest_1080p.mpd](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey/Manifest_1080p.mpd) | Widevine + PlayReady | Axinom test vectors | Distinct default_KID per track — good for per-track key handling |
+
+More vectors (cbcs, key rotation, HLS variants) at
+[Axinom/public-test-vectors](https://github.com/Axinom/public-test-vectors).
 
 ---
 
@@ -77,9 +94,8 @@ These sources are useful for testing decoder robustness, unusual containers, and
 ## Notes
 
 - HTTP streams may fail in strict HTTPS environments or when passed through certain players/tools
-- Live streams (Akamai) may go offline without notice
-- GTV bucket URLs are HTTP — some tools or network configs may block them
-- Dolby streams require HTTP playback context; forcing HTTPS will fail
+- Live streams (Akamai, Unified Streaming) may go offline without notice
+- All links verified 2026-07-11; removed then: Google/GTV bucket samples (403) and Dolby skip_armstrong streams (CloudFront distribution gone)
 
 ---
 
