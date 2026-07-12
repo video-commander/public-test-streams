@@ -73,6 +73,7 @@ init-segment inspection does not.
 | [angel-one-widevine/dash.mpd](https://storage.googleapis.com/shaka-demo-assets/angel-one-widevine/dash.mpd) | Widevine | Shaka demo assets | cenc scheme; Widevine pssh in manifest (content-ID based, no payload KIDs) |
 | [v7-MultiDRM-SingleKey/Manifest_1080p.mpd](https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest_1080p.mpd) | Widevine + PlayReady | Axinom test vectors | Single key; PlayReady pssh carries a WRMHEADER 4.0.0.0 with base64 KID |
 | [v7-MultiDRM-MultiKey/Manifest_1080p.mpd](https://media.axprod.net/TestVectors/v7-MultiDRM-MultiKey/Manifest_1080p.mpd) | Widevine + PlayReady | Axinom test vectors | Distinct default_KID per track — good for per-track key handling |
+| [angel-one-widevine/v-0240p-0400k-libx264.mp4](https://storage.googleapis.com/shaka-demo-assets/angel-one-widevine/v-0240p-0400k-libx264.mp4) | Widevine | Shaka demo assets | Rare: encrypted **progressive MP4** reachable without a manifest (single-file DASH rep; pssh + full sinf chain in the file). Other bitrates at the same path pattern |
 
 More vectors (cbcs, key rotation, HLS variants) at
 [Axinom/public-test-vectors](https://github.com/Axinom/public-test-vectors).
