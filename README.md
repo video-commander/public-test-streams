@@ -17,6 +17,8 @@ PRs welcome — if you find a broken link or want to add a source, open an issue
 | [Big_Buck_Bunny_360_10s_1MB.mp4 (H.264)](https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4) | H.264 | 640x360 | test-videos.co.uk | 10s clip, ~1MB |
 | [Big_Buck_Bunny_360_10s_1MB.mp4 (AV1)](https://test-videos.co.uk/vids/bigbuckbunny/mp4/av1/360/Big_Buck_Bunny_360_10s_1MB.mp4) | AV1 | 640x360 | test-videos.co.uk | 10s clip, ~1MB |
 | [flower.mp4](https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4) | H.264 | — | MDN/CC0 | Short, public domain |
+| [surround-test-5.1-voice.mp4](https://speakereject.com/audio/surround-test-5.1-voice.mp4) | H.264 + AAC-LC 5.1 | 1280x720 | [SpeakerEject (CC BY 4.0)](https://speakereject.com/surround-sound-test/#voice-announced-files) | 18s with spoken and visible channel labels |
+| [surround-test-7.1-voice.mp4](https://speakereject.com/audio/surround-test-7.1-voice.mp4) | H.264 + AAC-LC 7.1 | 1280x720 | [SpeakerEject (CC BY 4.0)](https://speakereject.com/surround-sound-test/#voice-announced-files) | 24s with spoken and visible channel labels |
 
 ---
 
